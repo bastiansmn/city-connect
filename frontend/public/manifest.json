@@ -1,0 +1,21 @@
+{
+  "name": "City Connect",
+  "short_name": "CityConnect",
+  "theme_color": "#7bc654",
+  "icons": [
+    {
+      "src": "./img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000"
+}

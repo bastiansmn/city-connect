@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: city-connect-javadoc # Sets service name
+  labels:
+    app: city-connect-javadoc # Labels and Selectors
+spec:
+  type: ClusterIP # Sets service type
+  ports:
+    - port: 80
+      name: http
+  selector:
+    app: javadoc

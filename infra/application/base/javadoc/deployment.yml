@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javadoc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javadoc
+  template:
+    metadata:
+      labels:
+        app: javadoc
+    spec:
+      containers:
+        - name: javadoc
+          image: registry.bastian-somon.fr/city-connect-javadoc:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+          - secretRef:
+              name: city-connect-secret
+          - configMapRef:
+              name: city-connect-config
+      imagePullSecrets:
+        - name: registry-creds

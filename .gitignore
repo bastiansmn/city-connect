@@ -1,0 +1,12 @@
+# IDE Related
+*.iml
+.idea
+out
+.vscode
+node_modules
+
+# Build related
+target/
+.env
+
+.DS_Store
