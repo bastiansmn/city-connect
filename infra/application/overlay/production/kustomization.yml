@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - ../../base
 
-namespace: prod-city-connect
+namespace: city-connect
 
 patches:
   - target:
