@@ -3,8 +3,6 @@ kind: Kustomization
 
 resources:
 - ingress.yml
-- frontend/service.yml
-- frontend/deployment.yml
 - backend/service.yml
 - backend/deployment.yml
 - javadoc/service.yml

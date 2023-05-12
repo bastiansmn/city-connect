@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: city-connect
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: city-connect
   template:
     metadata:
       labels:
-        app: backend
+        app: city-connect
     spec:
       containers:
-        - name: backend
-          image: registry.bastian-somon.fr/city-connect-backend:latest
+        - name: city-connect
+          image: registry.bastian-somon.fr/city-connect:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

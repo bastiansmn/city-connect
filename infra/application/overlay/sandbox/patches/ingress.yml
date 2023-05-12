@@ -1,6 +1,0 @@
-- op: replace
-  path: /spec/rules/0/host
-  value: city-connect-sandbox.bastian-somon.fr
-- op: replace
-  path: /spec/rules/1/host
-  value: city-connect-sandbox-javadoc.bastian-somon.fr

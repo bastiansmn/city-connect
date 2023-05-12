@@ -1,4 +1,4 @@
 # The %%VERSION%% is meant to be replaced by the CI/CD pipeline
 - op: replace
   path: /spec/template/spec/containers/0/image
-  value: registry.bastian-somon.fr/city-connect-backend:%%VERSION%%
+  value: registry.bastian-somon.fr/city-connect:%%VERSION%%

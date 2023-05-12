@@ -9,20 +9,13 @@ spec:
     - host: city-connect.bastian-somon.fr
       http:
         paths:
-          - path: /api
-            pathType: Prefix
-            backend:
-              service: 
-                name: city-connect-backend
-                port:
-                  number: 8080
           - path: /
             pathType: Prefix
             backend:
-              service:
-                name: city-connect-frontend
+              service: 
+                name: city-connect
                 port:
-                  number: 80
+                  number: 8080
     - host: city-connect-javadoc.bastian-somon.fr
       http:
         paths:

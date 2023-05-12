@@ -13,9 +13,5 @@ patches:
     path: ./patches/ingress.yml
   - target:
       kind: Deployment
-      name: backend
+      name: server
     path: ./patches/backend-deployment.yml
-  - target:
-      kind: Deployment
-      name: frontend
-    path: ./patches/frontend-deployment.yml
