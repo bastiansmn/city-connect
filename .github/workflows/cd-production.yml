@@ -3,7 +3,7 @@ name: City-connect CD for production
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - '*.*.*'
 
 jobs:
   verify-branch:
