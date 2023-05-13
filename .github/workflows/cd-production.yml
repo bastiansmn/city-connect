@@ -130,7 +130,7 @@ jobs:
         uses: actions/create-release@v1
         id: create_release
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
           release_name: ${{ github.ref_name }}
@@ -140,7 +140,7 @@ jobs:
       - name: Upload jar asset
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: backend/target/backend-0.0.1-SNAPSHOT.jar
