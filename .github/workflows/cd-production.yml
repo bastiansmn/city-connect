@@ -23,10 +23,17 @@ jobs:
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: maven-jars
+          name: application-jar
           path: |
-            backend/target/site/apidocs/*
             backend/target/backend-*.jar
+          retention-days: 1
+
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: javadoc-jar
+          path: |
+              backend/target/site/apidocs
           retention-days: 1
 
   build-javadoc:
@@ -35,10 +42,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Download build artifacts
+      - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-          name: maven-jars
+          name: javadoc-jar
 
       - name: Build javadoc docker image
         run: |
@@ -62,7 +69,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-          name: maven-jars
+          name: application-jar
 
       - name: Build application docker image
         run: |
