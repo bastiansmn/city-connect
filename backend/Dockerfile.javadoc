@@ -1,0 +1,5 @@
+## DOCKER FILE USED TO SERVE JAVADOC ##
+FROM nginx:1.23.1-alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY target/site/apidocs /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
