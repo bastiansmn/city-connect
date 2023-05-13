@@ -90,6 +90,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-application, build-javadoc]
     steps:
+      - uses: actions/checkout@v3
+
       - name: Rollout Kube
         run: |
           echo "*******************************"
@@ -118,6 +120,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: rollout-kube
     steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: application-jar
+          path: backend/target
+
       - name: Create release
         uses: actions/create-release@v1
         id: create_release
