@@ -5,7 +5,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>fr.hydrogen</groupId>
    <artifactId>city-connect</artifactId>
-   <version>1.0.2-SNAPSHOT</version>
+   <version>1.0.2</version>
    <packaging>pom</packaging>
 
    <modules>
@@ -18,7 +18,8 @@
       <developerConnection>scm:git:https://github.com/bastiansmn/city-connect.git
       </developerConnection>
       <url>https://github.com/bastiansmn/city-connect</url>
-   </scm>
+     <tag>city-connect-1.0.2</tag>
+  </scm>
 
   <dependencies>
     <dependency>
