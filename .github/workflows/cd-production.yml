@@ -25,7 +25,8 @@ jobs:
         with:
           name: maven-jars
           path: |
-            backend/target
+            backend/target/site/apidocs/*
+            backend/target/backend-*.jar
           retention-days: 1
 
   build-javadoc:
