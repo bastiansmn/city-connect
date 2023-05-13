@@ -46,6 +46,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: javadoc-jar
+          path: backend/target/site/apidocs
 
       - name: Check files
         run: |
@@ -81,6 +82,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: application-jar
+          path: backend/target
 
       - name: Build application docker image
         run: |
