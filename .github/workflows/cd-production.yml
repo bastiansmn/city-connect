@@ -47,6 +47,17 @@ jobs:
         with:
           name: javadoc-jar
 
+      - name: Check files
+        run: |
+          echo "*******************************"
+          echo "Checking files"
+          ls -la
+          ls -la backend
+          ls -la backend/target
+          ls -la backend/target/site
+          ls -la backend/target/site/apidocs
+          echo "*******************************"
+
       - name: Build javadoc docker image
         run: |
           echo "*******************************"
