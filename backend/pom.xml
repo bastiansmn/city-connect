@@ -4,11 +4,11 @@
    <parent>
       <groupId>fr.hydrogen</groupId>
       <artifactId>city-connect</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.2-SNAPSHOT</version>
    </parent>
    <name>city-connect-backend</name>
    <artifactId>backend</artifactId>
-   <version>1.0.2</version>
+   <version>1.0.2-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <properties>
