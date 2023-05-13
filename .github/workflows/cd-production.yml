@@ -20,13 +20,20 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean package javadoc:javadoc
 
+      - name: Rename jar
+        run: |
+          echo "*******************************"
+          echo "Renaming jar"
+          mv backend/target/backend-*.jar backend/target/backend-${{ github.ref_name }}.jar
+          echo "*******************************"
+
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: application-jar
           path: |
-            backend/target/backend-*.jar
-          retention-days: 1
+            backend/target/backend-${{ github.ref_name }}.jar
+            retention-days: 1
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3
@@ -143,6 +150,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: backend/target/backend-*.jar
+          asset_path: backend/target/backend-${{ github.ref_name }}.jar
           asset_name: city-connect-${{ github.ref_name }}.jar
           asset_content_type: application/java-archive
