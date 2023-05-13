@@ -18,10 +18,5 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
-          envFrom:
-          - secretRef:
-              name: city-connect-secret
-          - configMapRef:
-              name: city-connect-config
       imagePullSecrets:
         - name: registry-creds
