@@ -39,19 +39,6 @@
       <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
    </properties>
 
-   <distributionManagement>
-      <snapshotRepository>
-         <id>reposilite-repository-snapshots</id>
-         <name>Reposilite Repository</name>
-         <url>https://repository.bastian-somon.fr/snapshots</url>
-      </snapshotRepository>
-      <repository>
-         <id>reposilite-repository-releases</id>
-         <name>Reposilite Repository</name>
-         <url>https://repository.bastian-somon.fr/releases</url>
-      </repository>
-   </distributionManagement>
-
    <build>
       <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
          <plugins>
