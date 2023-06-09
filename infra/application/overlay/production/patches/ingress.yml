@@ -1,7 +1,0 @@
-- op: replace
-  path: /spec/rules/0/host
-  value: new-city-connect.bastian-somon.fr
-
-- op: replace
-  path: /spec/rules/1/host
-  value: new-city-connect-javadoc.bastian-somon.fr

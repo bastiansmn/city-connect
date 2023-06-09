@@ -8,9 +8,9 @@ namespace: city-connect
 
 patches:
   - target:
-      kind: Ingress
-      name: city-connect-ingress
-    path: ./patches/ingress.yml
+      kind: Deployment
+      name: javadoc
+    path: ./patches/javadoc-deployment.yml
   - target:
       kind: Deployment
       name: server
