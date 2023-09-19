@@ -83,6 +83,8 @@ async function addMarker(customEvent: L.LeafletMouseEvent) {
    try {
       const latLng = customEvent.latlng;
 
+      if (!latLng) return;
+
       // Attendre que latLng.lat et latLng.lng soient disponibles
       await Promise.resolve();
 
