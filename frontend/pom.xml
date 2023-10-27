@@ -42,7 +42,7 @@
                </execution>
             </executions>
             <configuration>
-               <nodeVersion>v16.20.0</nodeVersion>
+               <nodeVersion>v18.18.2</nodeVersion>
             </configuration>
          </plugin>
          <plugin>
