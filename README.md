@@ -14,6 +14,6 @@ Depuis le site, vous aurez la possibilité d'installer CityConnect sur votre app
 
 ## Instance hébergée.
 
-Il est aussi possible de lancer sa propre instance de CityConnect localement.
+Il est aussi possible de lancer sa propre instance de CityConnect.
 Il vous suffit de télécharger la dernière version du logiciel via les [releases](https://github.com/bastiansmn/city-connect/releases) et de lancer l'application en ligne de commande via `java -jar city-connect-<VERSION>.jar`.
 Celle ci sera disponible sur [http://localhost:8080](http://localhost:8080)
