@@ -16,13 +16,13 @@ spec:
                 name: city-connect
                 port:
                   number: 8080
-    - host: city-connect-javadoc.bastian-somon.fr
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: city-connect-javadoc
-                port:
-                  number: 80
+    # - host: city-connect-javadoc.bastian-somon.fr
+    #   http:
+    #     paths:
+    #       - path: /
+    #         pathType: Prefix
+    #         backend:
+    #           service:
+    #             name: city-connect-javadoc
+    #             port:
+    #               number: 80
