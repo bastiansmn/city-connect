@@ -7,10 +7,10 @@ resources:
 namespace: city-connect
 
 patches:
-  - target:
-      kind: Deployment
-      name: javadoc
-    path: ./patches/javadoc-deployment.yml
+  # - target:
+  #     kind: Deployment
+  #     name: javadoc
+  #   path: ./patches/javadoc-deployment.yml
   - target:
       kind: Deployment
       name: server

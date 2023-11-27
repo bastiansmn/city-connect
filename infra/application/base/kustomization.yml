@@ -5,5 +5,5 @@ resources:
 - ingress.yml
 - backend/service.yml
 - backend/deployment.yml
-- javadoc/service.yml
-- javadoc/deployment.yml
+# - javadoc/service.yml
+# - javadoc/deployment.yml
