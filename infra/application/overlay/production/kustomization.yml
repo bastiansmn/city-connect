@@ -13,5 +13,5 @@ patches:
   #   path: ./patches/javadoc-deployment.yml
   - target:
       kind: Deployment
-      name: server
+      name: city-connect
     path: ./patches/backend-deployment.yml
