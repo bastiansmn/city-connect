@@ -92,29 +92,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Rollout Kube
-        run: |
-          echo "*******************************"
-          echo "Importing custom kubectl config"
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > config
-          echo "*******************************"
+      - name: Kubernetes Action with Python 2.x fixes
+        uses: fno/kubernetes-action-no-aws@master
 
-          echo "*******************************"
-          echo "Replacing value in deployment.yaml ..."
-          sed -i "s/%%VERSION%%/${{ github.ref_name }}/1" infra/application/overlay/production/patches/backend-deployment.yml
-          # sed -i "s/%%VERSION%%/${{ github.ref_name }}/1" infra/application/overlay/production/patches/javadoc-deployment.yml
-          echo "*******************************"
-
-          echo "*******************************"
-          echo "Updating infrastructure ..."
-          kubectl --kubeconfig config apply -k infra/application/overlay/production
-          echo "*******************************"
-
-          echo "*******************************"
-          echo "Rolling out deployment ..."
-          kubectl --kubeconfig config rollout restart deployment/city-connect -n city-connect
-          # kubectl --kubeconfig config rollout restart deployment/javadoc -n city-connect
-          echo "*******************************"
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG }}
+        with:
+          args: rollout restart deployment/city-connect -n city-connect
 
   create-release:
     runs-on: ubuntu-latest
