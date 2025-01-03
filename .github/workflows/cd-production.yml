@@ -96,7 +96,7 @@ jobs:
         run: |
           echo "*******************************"
           echo "Importing custom kubectl config"
-          echo ${{ secrets.KUBE_CONFIG }} | base64 -d > config
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > config
           echo "*******************************"
 
           echo "*******************************"

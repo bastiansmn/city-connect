@@ -3,6 +3,9 @@ kind: Ingress
 
 metadata:
   name: city-connect-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+
 spec:
   ingressClassName: nginx
   rules:
@@ -16,13 +19,7 @@ spec:
                 name: city-connect
                 port:
                   number: 8080
-    # - host: city-connect-javadoc.bastian-somon.fr
-    #   http:
-    #     paths:
-    #       - path: /
-    #         pathType: Prefix
-    #         backend:
-    #           service:
-    #             name: city-connect-javadoc
-    #             port:
-    #               number: 80
+  tls:
+    - hosts:
+        - '*.bastian-somon.fr'
+      secretName: letsencrypt-tls-cert
